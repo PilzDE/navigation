@@ -1,0 +1,5 @@
+<!-- Top level launch file to start navigation on a robot -->
+<launch>
+    <include file="$(find pilz_navigation)/sub_launch/amcl.launch"/>
+    <include file="$(find pilz_navigation)/sub_launch/move_base.launch"/>
+</launch>

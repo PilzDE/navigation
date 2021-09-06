@@ -1,0 +1,12 @@
+footprint: [[0.7,0.5],[-0.55,0.5],[-0.55,-0.5],[0.7,-0.5],[0.75,0]]
+
+inflation_layer:
+  inflation_radius: 0.8
+  cost_scaling_factor: 5
+
+# observation_sources: laser_1
+
+# laser_1: {sensor_frame: laser_1_scan , data_type: LaserScan, topic: laser_scanner/scan, marking: true, clearing: true, obstacle_range: 5.0, raytrace_range: 8.0}
+
+
+

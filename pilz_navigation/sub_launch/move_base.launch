@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<launch>
+ <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    
+    <!-- Costmaps -->
+    <rosparam file="$(find pilz_navigation)/config/costmap_common.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find pilz_navigation)/config/costmap_common.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find pilz_navigation)/config/costmap_local.yaml" command="load" />
+    <rosparam file="$(find pilz_navigation)/config/costmap_global.yaml" command="load" />
+
+    <!-- Global Planner -->
+    <!-- NavFn -->
+    <param name="base_global_planner" value="navfn/NavfnROS"/>
+    <rosparam file="$(find pilz_navigation)/config/navfn_global_planner.yaml" command="load" />
+
+    <!-- Local Planner -->
+    <!-- Teb -->
+    <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS"/>
+    <rosparam file="$(find pilz_navigation)/config/teb_local_planner.yaml" command="load" />
+    <!-- NeoLocalPlanner -->
+    <!--param name="base_local_planner" value="neo_local_planner/NeoLocalPlanner"/>
+    <rosparam file="$(find pilz_navigation)/config/neo_local_planner.yaml" command="load" /-->
+
+    <!-- Common -->
+    <rosparam file="$(find pilz_navigation)/config/move_base.yaml" command="load" />
+
+  </node>
+</launch>

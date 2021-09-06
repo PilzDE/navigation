@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+  <name>pilz_navigation</name>
+  <version>0.0.0</version>
+  <description>Configuration storage for all mobile robots we are currently using</description>
+
+  <maintainer email="a.gutenkunst@pilz.de">Alexander Gutenkunst</maintainer>
+  <maintainer email="c.doehn@pilz.de">Christian Döhn</maintainer>
+  <maintainer email="c.henkel@pilz.de">Christian Henkel</maintainer>
+  <maintainer email="i.martini@pilz.de">Immanuel Martini</maintainer>
+  <maintainer email="r.feistenauer@pilz.de">Richard Feistenauer</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>amcl</exec_depend>
+  <exec_depend>move_base</exec_depend>
+  <exec_depend>navfn</exec_depend>
+  <exec_depend>neo_local_planner</exec_depend>
+  <exec_depend>teb_local_planner</exec_depend>
+</package>

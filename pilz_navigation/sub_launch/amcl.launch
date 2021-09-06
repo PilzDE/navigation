@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="map" default="$(find pilz_navigation)/maps/$(env MAP).yaml" />
+
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map)" />
+
+  <node pkg="amcl" type="amcl" name="amcl">
+    <remap from="/scan" to="/laser_scanner/scan" />
+    <rosparam file="$(find pilz_navigation)/config/amcl.yaml" command="load" />
+  </node>
+</launch>
