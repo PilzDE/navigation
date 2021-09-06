@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<launch>
+    <!--robot platform-->
+    <!--relayboard V2-->
+    <include file="$(find neo_mp_400)/configs/relayboard_v2/relayboard_v2.launch"/>
+    <!--kinematics-->
+    <include file="$(find neo_mp_400)/configs/kinematics/kinematics.launch"/>
+
+    <!--sensors-->
+    <!--psen_scan-->
+    <include file="$(find neo_mp_400)/launch/psen_scan_v2.launch"/>
+
+    <!--teleoperation-->
+    <!--neobotix basic joystick node-->
+    <include file="$(find neo_mp_400)/configs/teleop/teleop.launch"/>
+    <!--robot model-->
+    <param name="robot_description" command="$(find xacro)/xacro '$(find neo_mp_400)/robot_model/mp_400/mp_400.urdf.xacro'" />
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+            <param name="use_gui" value="false" />
+    </node>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+            <node pkg="tf" type="static_transform_publisher" name="psen_scan_link_broadcaster" args=".35 .24 .2 0 0 .2231064 .9747941 /base_link /laser_1_scan 1" />
+</launch>

@@ -2,4 +2,5 @@
 <launch>
     <include file="$(find pilz_navigation)/sub_launch/amcl.launch"/>
     <include file="$(find pilz_navigation)/sub_launch/move_base.launch"/>
+    <include file="$(find pilz_navigation)/sub_launch/driver_$(env ROBOT).launch"/>
 </launch>
