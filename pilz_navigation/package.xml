@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package>
+<package format="2">
   <name>pilz_navigation</name>
   <version>0.0.0</version>
   <description>Configuration storage for all mobile robots we are currently using</description>
@@ -18,5 +18,6 @@
   <exec_depend>move_base</exec_depend>
   <exec_depend>navfn</exec_depend>
   <exec_depend>neo_local_planner</exec_depend>
-  <exec_depend>teb_local_planner</exec_depend>
+  <exec_depend>teb_local_planner</exec_depend>  
+  <exec_depend>slam_toolbox</exec_depend>
 </package>
