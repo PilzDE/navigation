@@ -13,6 +13,17 @@ Our Volksbot which is probably similar to Volksbot RT 3.
 
 # Provided launchfiles
 
+## SLAM
+Run 
+```
+roslaunch pilz_navigation slam.launch
+```
+
+When your are done mapping run in `pilz_navigation/maps/`
+```
+rosrun map_server map_saver -f <NAME_OF_MAP>
+```
+
 ## Basic Navigation
 This launchfile starts all that is needed to autonomously navigate the robots to a point.
 ```
