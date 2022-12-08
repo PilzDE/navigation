@@ -9,6 +9,9 @@ local_costmap:
   height: 5
   resolution: 0.02
 
-  observation_sources: laser_1
-
-  laser_1: {sensor_frame: laser_1_scan , data_type: LaserScan, topic: laser_scanner/scan, marking: true, clearing: true, obstacle_range: 5.0, raytrace_range: 8.0}
+  obstacle_layer:
+    observation_sources: laser_1 point_cloud_sensor
+  
+    laser_1: {sensor_frame: laser_1_scan , data_type: LaserScan, topic: laser_scanner/scan, marking: true, clearing: true, obstacle_range: 5.0, raytrace_range: 8.0}
+  
+    point_cloud_sensor: {sensor_frame: base_link , data_type: PointCloud2, topic: pointcloud, marking: true, clearing: true, obstacle_range: 5.0, raytrace_range: 8.0}
